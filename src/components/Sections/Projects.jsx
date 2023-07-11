@@ -86,11 +86,6 @@ const AButton = styled.a`
     color: #fff;
   }
 `;
-const HeaderInfo = styled.div`
-  @media (max-width: 860px) {
-    text-align: center;
-  }
-`;
 const Advertising = styled.div`
   padding: 100px 0;
   margin: 100px 0;
