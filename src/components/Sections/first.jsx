@@ -16,17 +16,6 @@ export default function FirstPage() {
             下载测试链接 下载测试链接
           </HeaderP>
           <BtnWrapper>
-            {/* <FullButton
-              title="Download"
-              action={() =>
-                window.open(
-                  "https://play.google.com/store/apps/details?id=com.seedao.app",
-                  "_blank"
-                )
-              }
-              icon={<ButtonIcon src={IconAndroid} alt="" />}
-              border
-            /> */}
             <a
               href="https://play.google.com/store/apps/details?id=com.seedao.app&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
               target="_blank"
@@ -48,26 +37,6 @@ export default function FirstPage() {
             alt="office"
             style={{ zIndex: 9 }}
           />
-
-          {/* <QuoteWrapper className="flexCenter darkBg radius8">
-            <QuotesWrapper>
-              <QuotesIcon />
-            </QuotesWrapper>
-            <div>
-              <p className="font15 whiteColor">
-                <em>
-                  Friends, such as we desire, are dreams and fables. Friendship
-                  demands the ability to do without it.
-                </em>
-              </p>
-              <p
-                className="font13 orangeColor textRight"
-                style={{ marginTop: "10px" }}
-              >
-                Ralph Waldo Emerson
-              </p>
-            </div>
-          </QuoteWrapper> */}
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
