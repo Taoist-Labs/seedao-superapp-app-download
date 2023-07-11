@@ -24,11 +24,12 @@ jobs:
      - name: Compile 
        run: npm run build
     
-     - name: Setup Pages
-       uses: actions/configure-pages@v3
+     - name: Deploy to GitHub Pages
+       if: success()
+       uses: crazy-max/ghaction-github-pages@v3
        with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
-          static_site_generator: next
+          target_branch: gh-pages
+          build_dir: build
+          fqdn: download.seedao.tech
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
