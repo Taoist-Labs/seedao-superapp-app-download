@@ -1,4 +1,4 @@
-name: Deploy to another repo
+name: Deploy to github page
 
 on:
   push:
@@ -24,16 +24,11 @@ jobs:
      - name: Compile 
        run: npm run build
     
-     - name: Pushes to another repository
-       run: |
-         git clone --single-branch --branch "main" "https://xrdavies:${{ secrets.PERSONAL_TOKEN }}@github.com/Taoist-Labs/seedao-superapp-app-download-preview.git";
-         cd seedao-superapp-app-download-preview;
-         git config --global user.name bot;
-         git config --global user.email bot@theseedlabs.io;
-         cp -R ../build/* .;
-         touch .nojekyll
-         git add .;
-         git status;
-         git commit -m "deploy";
-         git status;
-         git push "https://xrdavies:${{ secrets.PERSONAL_TOKEN }}@github.com/Taoist-Labs/seedao-superapp-app-download-preview.git" --set-upstream main
+     - name: Setup Pages
+       uses: actions/configure-pages@v3
+       with:
+          # Automatically inject basePath in your Next.js configuration file and disable
+          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
+          #
+          # You may remove this line if you want to manage the configuration yourself.
+          static_site_generator: next
