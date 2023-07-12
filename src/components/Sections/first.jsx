@@ -24,7 +24,7 @@ export default function FirstPage() {
               />
             </AButton>
             <AButton
-              src="https://testflight.apple.com/join/3QI4TSfd"
+              href="https://testflight.apple.com/join/3QI4TSfd"
               target="_blank"
             >
               <ButtonIcon src={IconiOS} alt="" />
